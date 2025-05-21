@@ -76,7 +76,7 @@ class Jet_Engine_Public_User_Stores {
 	 * @return [type] [description]
 	 */
 	public function data_stores_enabled() {
-		return jet_engine()->modules->is_module_active( 'data-stores' );
+		return function_exists( 'jet_engine' ) && jet_engine()->modules->is_module_active( 'data-stores' );
 	}
 
 }
